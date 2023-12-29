@@ -36,8 +36,33 @@ class Palyer {
   }
 }
 
+class Platform {
+  constructor({ x, y }) {
+    this.position = {
+      x,
+      y,
+    };
+    this.width = 200;
+    this.height = 20;
+  }
+
+  draw() {
+    ctx.fillStyle = "green";
+    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+  }
+}
+
 const player = new Palyer();
-player.update();
+const platforms = [
+  new Platform({
+    x: 300,
+    y: 200,
+  }),
+  new Platform({
+    x: 600,
+    y: 300,
+  }),
+];
 
 const keys = {
   right: {
@@ -52,14 +77,40 @@ function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   player.update();
+  platforms.forEach((platform) => {
+    platform.draw();
+  });
 
-  if (keys.right.pressed) {
+  if (keys.right.pressed && player.position.x < 400) {
     player.velociity.x = 5;
-  } else if (keys.left.pressed) {
+  } else if (keys.left.pressed && player.position.x > 100) {
     player.velociity.x = -5;
   } else {
-    player.velociity.x = 0;
+    player.velociity.x *= 0.9;
+
+    if (keys.right.pressed) {
+      platforms.forEach((platform) => {
+        platform.position.x -= 5;
+      });
+    } else if (keys.left.pressed) {
+      platforms.forEach((platform) => {
+        platform.position.x += 5;
+      });
+    }
   }
+
+  //   player platform collision detection
+  platforms.forEach((platform) => {
+    if (
+      player.position.y + player.height <= platform.position.y &&
+      player.position.y + player.height + player.velociity.y >=
+        platform.position.y &&
+      player.position.x + player.width >= platform.position.x &&
+      player.position.x <= platform.position.x + platform.width
+    ) {
+      player.velociity.y = 0;
+    }
+  });
 }
 
 animate();
@@ -81,7 +132,6 @@ window.addEventListener("keydown", ({ keyCode }) => {
     case 40:
       break;
   }
-  console.log(keys.right.pressed);
 });
 
 window.addEventListener("keyup", ({ keyCode }) => {
@@ -91,7 +141,7 @@ window.addEventListener("keyup", ({ keyCode }) => {
       break;
 
     case 38:
-        player.velociity.y += 20;
+      player.velociity.y += 20;
       break;
 
     case 39:
@@ -101,5 +151,4 @@ window.addEventListener("keyup", ({ keyCode }) => {
     case 40:
       break;
   }
-  console.log(keys.left.pressed);
 });
