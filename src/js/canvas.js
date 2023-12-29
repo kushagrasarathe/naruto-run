@@ -1,8 +1,10 @@
+import platform from "../images/platform.png";
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.width = 1024;
+canvas.height = 576;
 
 const gravity = 0.5;
 
@@ -37,30 +39,35 @@ class Palyer {
 }
 
 class Platform {
-  constructor({ x, y }) {
+  constructor({ x, y, image }) {
     this.position = {
       x,
       y,
     };
-    this.width = 200;
-    this.height = 20;
+    this.image = image;
+    this.width = this.image.width;
+    this.height = this.image.height;
   }
 
   draw() {
-    ctx.fillStyle = "green";
-    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+    ctx.drawImage(this.image, this.position.x, this.position.y);
   }
 }
+
+const image = new Image();
+image.src = platform;
 
 const player = new Palyer();
 const platforms = [
   new Platform({
-    x: 300,
-    y: 200,
+    x: -1,
+    y: 475,
+    image,
   }),
   new Platform({
-    x: 600,
-    y: 300,
+    x: image.width - 3,
+    y: 475,
+    image,
   }),
 ];
 
@@ -73,13 +80,16 @@ const keys = {
   },
 };
 
+let scrollOffset = 0;
+
 function animate() {
   requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  player.update();
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   platforms.forEach((platform) => {
     platform.draw();
   });
+  player.update();
 
   if (keys.right.pressed && player.position.x < 400) {
     player.velociity.x = 5;
@@ -89,13 +99,19 @@ function animate() {
     player.velociity.x *= 0.9;
 
     if (keys.right.pressed) {
+      scrollOffset += 5;
+
       platforms.forEach((platform) => {
         platform.position.x -= 5;
       });
     } else if (keys.left.pressed) {
+      scrollOffset -= 5;
       platforms.forEach((platform) => {
         platform.position.x += 5;
       });
+    }
+    if (scrollOffset > 2000) {
+      console.log("You winn");
     }
   }
 

@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/opt/homebrew/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/kushagra/Library/Caches/Yarn/v6/npm-ansi-styles-4.3.0-edd803628ae71c04c85ae7a0906edad34b648937-integrity/node_modules/ansi-styles/license' -> '/Users/kushagra/zwork/personal projects/naruto-game/node_modules/browser-sync/node_modules/ansi-styles/license'
+
+npm manifest: 
+  {
+    "name": "canvas-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "scripts": {
+      "dev": "webpack --config webpack.config.js",
+      "start": "webpack --config webpack.config.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@babel/preset-env": "^7.9.0",
+      "babel-loader": "^8.1.0",
+      "browser-sync": "^2.26.7",
+      "browser-sync-webpack-plugin": "^2.2.2",
+      "file-loader": "^6.2.0",
+      "html-webpack-plugin": "^4.0.3",
+      "prettier": "^2.0.2",
+      "webpack": "^4.42.1",
+      "webpack-cli": "^3.3.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
