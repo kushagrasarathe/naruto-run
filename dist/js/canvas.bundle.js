@@ -86,29 +86,16 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/images/background.png":
-/*!***********************************!*\
-  !*** ./src/images/background.png ***!
-  \***********************************/
+/***/ "./src/images/background-naruto.png":
+/*!******************************************!*\
+  !*** ./src/images/background-naruto.png ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "072d51bcc9c09311d4c2a6708b05bddc.png");
-
-/***/ }),
-
-/***/ "./src/images/hills.png":
-/*!******************************!*\
-  !*** ./src/images/hills.png ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "cfffe4c371f5e11d372b398a87c51dd0.png");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "f6091cd8b4bcbe35e4a03ce99c153bc3.png");
 
 /***/ }),
 
@@ -138,6 +125,71 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/images/ramen-shop.png":
+/*!***********************************!*\
+  !*** ./src/images/ramen-shop.png ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "893625d5833a2535965ff457f1cf1ef3.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteRunLeft.png":
+/*!**************************************!*\
+  !*** ./src/images/spriteRunLeft.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "c67ea51444aafa9bdcd5bdfd4f4a55bb.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteRunRight.png":
+/*!***************************************!*\
+  !*** ./src/images/spriteRunRight.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "a2f75989924952a7e49ce0405d487c93.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteStandLeft.png":
+/*!****************************************!*\
+  !*** ./src/images/spriteStandLeft.png ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "11514f48f22f6d8e3cf748e45e3e1ffb.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteStandRight.png":
+/*!*****************************************!*\
+  !*** ./src/images/spriteStandRight.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "01e8f15e899155c68950c40e0a6b8df0.png");
+
+/***/ }),
+
 /***/ "./src/js/canvas.js":
 /*!**************************!*\
   !*** ./src/js/canvas.js ***!
@@ -147,16 +199,28 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _images_platform_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/platform.png */ "./src/images/platform.png");
-/* harmony import */ var _images_hills_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/hills.png */ "./src/images/hills.png");
-/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/background.png */ "./src/images/background.png");
-/* harmony import */ var _images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/platformSmallTall.png */ "./src/images/platformSmallTall.png");
+/* harmony import */ var _sounds_bgm_mp3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sounds/bgm.mp3 */ "./src/sounds/bgm.mp3");
+/* harmony import */ var _images_platform_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/platform.png */ "./src/images/platform.png");
+/* harmony import */ var _images_ramen_shop_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/ramen-shop.png */ "./src/images/ramen-shop.png");
+/* harmony import */ var _images_background_naruto_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/background-naruto.png */ "./src/images/background-naruto.png");
+/* harmony import */ var _images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/platformSmallTall.png */ "./src/images/platformSmallTall.png");
+/* harmony import */ var _images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/spriteRunLeft.png */ "./src/images/spriteRunLeft.png");
+/* harmony import */ var _images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/spriteRunRight.png */ "./src/images/spriteRunRight.png");
+/* harmony import */ var _images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/spriteStandLeft.png */ "./src/images/spriteStandLeft.png");
+/* harmony import */ var _images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/spriteStandRight.png */ "./src/images/spriteStandRight.png");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+// 111:37:51 / 2:11:02
+// 7535 x 591
+
+
+
+
+
 
 
 
@@ -174,19 +238,19 @@ var Palyer = /*#__PURE__*/function () {
       x: 100,
       y: 100
     };
-    this.width = 30;
-    this.height = 30;
+    this.width = 46;
+    this.height = 100;
     this.color = "gold";
     this.velociity = {
       x: 0,
       y: 1
     };
+    this.image = createImage(_images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_8__["default"]);
   }
   _createClass(Palyer, [{
     key: "draw",
     value: function draw() {
-      ctx.fillStyle = this.color;
-      ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+      ctx.drawImage(this.image, 0, 0, 177, 400, this.position.x, this.position.y, this.width, this.height);
     }
   }, {
     key: "update",
@@ -250,8 +314,8 @@ function createImage(src) {
   image.src = src;
   return image;
 }
-var platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
-var platformSmallTallImage = createImage(_images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var platformSmallTallImage = createImage(_images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var player = new Palyer();
 var platforms = [];
 var genericObjects = [];
@@ -264,8 +328,9 @@ var keys = {
   }
 };
 var scrollOffset = 0;
+var backgroundImage = createImage(_images_background_naruto_png__WEBPACK_IMPORTED_MODULE_3__["default"]);
 function init() {
-  platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_1__["default"]);
   player = new Palyer();
   platforms = [new Platform({
     x: platformImage.width * 4 + 300 - 2 + platformImage.width - platformSmallTallImage.width,
@@ -295,15 +360,55 @@ function init() {
     x: platformImage.width * 5 + 750,
     y: 475,
     image: platformImage
+  }), new Platform({
+    x: platformImage.width * 6 + 750,
+    y: 375,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 7 + 750 - 3,
+    y: 375,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 8 + 1050,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 9 + 1050 - 2,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 10 + 1050 - 2,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 11 + 1050 - 2,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 12 + 1050 - 2,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 13 + 1050 - 2,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 14 + 1050 - 2,
+    y: 475,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 15 + 1050 - 2,
+    y: 475,
+    image: platformImage
   })];
   genericObjects = [new GenericObject({
     x: -1,
     y: -1,
-    image: createImage(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
+    image: backgroundImage
   }), new GenericObject({
     x: -1,
     y: -1,
-    image: createImage(_images_hills_png__WEBPACK_IMPORTED_MODULE_1__["default"])
+    image: createImage(_images_ramen_shop_png__WEBPACK_IMPORTED_MODULE_2__["default"])
   })];
   scrollOffset = 0;
 }
@@ -325,7 +430,7 @@ function animate() {
   }
   if (keys.right.pressed && player.position.x < 400) {
     player.velociity.x = player.speed;
-  } else if (keys.left.pressed && player.position.x > 100) {
+  } else if (keys.left.pressed && player.position.x > 100 || keys.left.pressed && scrollOffset === 0 && player.position.x > 0) {
     player.velociity.x = -player.speed;
   } else {
     player.velociity.x *= 0.9;
@@ -341,7 +446,7 @@ function animate() {
       platforms.forEach(function (platform) {
         platform.position.x -= player.speed;
       });
-    } else if (keys.left.pressed) {
+    } else if (keys.left.pressed && scrollOffset > 0) {
       scrollOffset -= player.speed;
 
       // move hills when going left slightly slower than background
@@ -354,7 +459,7 @@ function animate() {
     }
 
     // win condition
-    if (scrollOffset > 2000) {
+    if (scrollOffset > platformImage.width * 15 + 1050) {
       console.log("You winn");
     }
 
@@ -381,7 +486,7 @@ window.addEventListener("keydown", function (_ref3) {
       keys.left.pressed = true;
       break;
     case 38:
-      player.velociity.y -= 15;
+      player.velociity.y -= 12;
       break;
     case 39:
       keys.right.pressed = true;
@@ -397,7 +502,7 @@ window.addEventListener("keyup", function (_ref4) {
       keys.left.pressed = false;
       break;
     case 38:
-      player.velociity.y += 15;
+      // player.velociity.y += 15;
       break;
     case 39:
       keys.right.pressed = false;
@@ -406,6 +511,21 @@ window.addEventListener("keyup", function (_ref4) {
       break;
   }
 });
+var myAudio = new Audio(_sounds_bgm_mp3__WEBPACK_IMPORTED_MODULE_0__["default"]);
+myAudio.play();
+
+/***/ }),
+
+/***/ "./src/sounds/bgm.mp3":
+/*!****************************!*\
+  !*** ./src/sounds/bgm.mp3 ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "a803e56fe3cf1f3c1f13d1bcbdd2d472.mp3");
 
 /***/ })
 

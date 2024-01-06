@@ -1,7 +1,16 @@
+// 111:37:51 / 2:11:02
+// 7535 x 591
+import bgm from "../sounds/bgm.mp3";
+
 import platform from "../images/platform.png";
-import hills from "../images/hills.png";
-import background from "../images/background.png";
+import hills from "../images/ramen-shop.png";
+import background from "../images/background-naruto.png";
 import platformSmallTall from "../images/platformSmallTall.png";
+
+import spriteRunLeft from "../images/spriteRunLeft.png";
+import spriteRunRight from "../images/spriteRunRight.png";
+import spriteStandLeft from "../images/spriteStandLeft.png";
+import spriteStandRight from "../images/spriteStandRight.png";
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -18,17 +27,27 @@ class Palyer {
       x: 100,
       y: 100,
     };
-    this.width = 30;
-    this.height = 30;
+    this.width = 46;
+    this.height = 100;
     this.color = "gold";
     this.velociity = {
       x: 0,
       y: 1,
     };
+    this.image = createImage(spriteStandRight);
   }
   draw() {
-    ctx.fillStyle = this.color;
-    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+    ctx.drawImage(
+      this.image,
+      0,
+      0,
+      177,
+      400,
+      this.position.x,
+      this.position.y,
+      this.width,
+      this.height
+    );
   }
   update() {
     this.draw();
@@ -97,6 +116,8 @@ const keys = {
 
 let scrollOffset = 0;
 
+const backgroundImage = createImage(background);
+
 function init() {
   platformImage = createImage(platform);
 
@@ -142,14 +163,65 @@ function init() {
       y: 475,
       image: platformImage,
     }),
+    new Platform({
+      x: platformImage.width * 6 + 750,
+      y: 375,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 7 + 750 - 3,
+      y: 375,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 8 + 1050,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 9 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 10 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 11 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 12 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 13 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 14 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
+    new Platform({
+      x: platformImage.width * 15 + 1050 - 2,
+      y: 475,
+      image: platformImage,
+    }),
   ];
 
   genericObjects = [
     new GenericObject({
       x: -1,
       y: -1,
-      image: createImage(background),
+      image: backgroundImage,
     }),
+
     new GenericObject({
       x: -1,
       y: -1,
@@ -184,7 +256,10 @@ function animate() {
 
   if (keys.right.pressed && player.position.x < 400) {
     player.velociity.x = player.speed;
-  } else if (keys.left.pressed && player.position.x > 100) {
+  } else if (
+    (keys.left.pressed && player.position.x > 100) ||
+    (keys.left.pressed && scrollOffset === 0 && player.position.x > 0)
+  ) {
     player.velociity.x = -player.speed;
   } else {
     player.velociity.x *= 0.9;
@@ -201,7 +276,7 @@ function animate() {
       platforms.forEach((platform) => {
         platform.position.x -= player.speed;
       });
-    } else if (keys.left.pressed) {
+    } else if (keys.left.pressed && scrollOffset > 0) {
       scrollOffset -= player.speed;
 
       // move hills when going left slightly slower than background
@@ -215,7 +290,7 @@ function animate() {
     }
 
     // win condition
-    if (scrollOffset > 2000) {
+    if (scrollOffset > platformImage.width * 15 + 1050) {
       console.log("You winn");
     }
 
@@ -250,7 +325,7 @@ window.addEventListener("keydown", ({ keyCode }) => {
       break;
 
     case 38:
-      player.velociity.y -= 15;
+      player.velociity.y -= 12;
       break;
 
     case 39:
@@ -269,7 +344,7 @@ window.addEventListener("keyup", ({ keyCode }) => {
       break;
 
     case 38:
-      player.velociity.y += 15;
+      // player.velociity.y += 15;
       break;
 
     case 39:
@@ -280,3 +355,6 @@ window.addEventListener("keyup", ({ keyCode }) => {
       break;
   }
 });
+
+const myAudio = new Audio(bgm);
+myAudio.play();
